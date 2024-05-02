@@ -13,3 +13,5 @@ oc label svc/nodejs-api discovery.3scale.net="true" >/dev/null 2>&1
 
 # Add cluster role to user
 oc adm policy add-cluster-role-to-user view system:serviceaccount:3scale:amp >/dev/null 2>&1
+
+echo "Service label complete"
