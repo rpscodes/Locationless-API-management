@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Annotate quarkus-openapi service
-oc annotate svc/quarkus-openapi "discovery.3scale.net/description-path=/openapi?format=json" >/dev/null
-oc annotate svc/quarkus-openapi discovery.3scale.net/port="8080" >/dev/null
-oc annotate svc/quarkus-openapi discovery.3scale.net/scheme=http >/dev/null
-oc label svc/quarkus-openapi discovery.3scale.net="true" >/dev/null
+# Annotate quarkus-api service
+oc annotate svc/quarkus-api "discovery.3scale.net/description-path=/openapi?format=json" >/dev/null
+oc annotate svc/quarkus-api discovery.3scale.net/port="8080" >/dev/null
+oc annotate svc/quarkus-api discovery.3scale.net/scheme=http >/dev/null
+oc label svc/quarkus-api discovery.3scale.net="true" >/dev/null
 
 # Annotate nodejs-api service
 oc annotate svc/nodejs-api discovery.3scale.net/port="8080" >/dev/null
